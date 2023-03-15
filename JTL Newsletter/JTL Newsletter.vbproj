@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26B45D51-481B-4008-840A-B144AE86E004}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>JTL_Newsletter.My.MyApplication</StartupObject>
+    <RootNamespace>JTL_Newsletter</RootNamespace>
+    <AssemblyName>JTL Newsletter</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>JTL Newsletter.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>JTL Newsletter.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Email-Reply.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.DHTMLEDLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Interop.DHTMLEDLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Interop.TRIEDITLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="OpenPop, Version=2.0.4.369, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\OpenPop.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsCryptoAPI.vb" />
+    <Compile Include="clsDatenbank.vb" />
+    <Compile Include="clsMail.vb" />
+    <Compile Include="clsUpdate_db.vb" />
+    <Compile Include="debug.vb" />
+    <Compile Include="frmDebug.Designer.vb">
+      <DependentUpon>frmDebug.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDebug.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHilfe.Designer.vb">
+      <DependentUpon>frmHilfe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHilfe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDatenbankEinstellungen.Designer.vb">
+      <DependentUpon>frmDatenbankEinstellungen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDatenbankEinstellungen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJTLEinstellungen.Designer.vb">
+      <DependentUpon>frmJTLEinstellungen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmJTLEinstellungen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJTLSync.Designer.vb">
+      <DependentUpon>frmJTLSync.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmJTLSync.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMailServer.Designer.vb">
+      <DependentUpon>frmMailServer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMailServer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMailVorschau.Designer.vb">
+      <DependentUpon>frmMailVorschau.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMailVorschau.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modBasicFunction.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmDebug.resx">
+      <DependentUpon>frmDebug.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHilfe.resx">
+      <DependentUpon>frmHilfe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDatenbankEinstellungen.resx">
+      <DependentUpon>frmDatenbankEinstellungen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJTLEinstellungen.resx">
+      <DependentUpon>frmJTLEinstellungen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJTLSync.resx">
+      <DependentUpon>frmJTLSync.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMailServer.resx">
+      <DependentUpon>frmMailServer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMailVorschau.resx">
+      <DependentUpon>frmMailVorschau.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MSHTML">
+      <Guid>{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Icons\arrow-redo-icon.png" />
+    <None Include="bin\Icons\arrow-undo-icon.png" />
+    <None Include="bin\Icons\text-bold.ico" />
+    <None Include="bin\Icons\tables.ico" />
+    <None Include="bin\Icons\Mimetype-vcalendar.ico" />
+    <Content Include="Email-Reply.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
